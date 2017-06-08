@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: "Gatsby Starter Blog",
+    description: "Yes we can",
+    site_url: "http://localhost:1234/",
     author: "Kyle Mathews",
   },
   plugins: [
@@ -34,6 +36,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-feed`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
