@@ -1,17 +1,17 @@
 module.exports = {
   siteMetadata: {
-    title: "Comeback 45",
-    description: "A little bit of this and that",
-    site_url: "dat://9d7e4aa29575a2b44256881bb870422e73f505f91c0fc6ef4b4fd654216168e7",
-    author: "Robin Millette",
+    title: 'Comeback 45',
+    description: 'A little bit of this and that',
+    site_url: 'dat://9d7e4aa29575a2b44256881bb870422e73f505f91c0fc6ef4b4fd654216168e7',
+    author: 'Robin Millette'
   },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/pages`,
-        name: "pages",
-      },
+        name: 'pages'
+      }
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -20,20 +20,20 @@ module.exports = {
           {
             resolve: `gatsby-remark-responsive-image`,
             options: {
-              maxWidth: 590,
-            },
+              maxWidth: 590
+            }
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
+              wrapperStyle: `margin-bottom: 1.0725rem`
+            }
           },
-          "gatsby-remark-prismjs",
-          "gatsby-remark-copy-linked-files",
-          "gatsby-remark-smartypants",
-        ],
-      },
+          'gatsby-remark-prismjs',
+          'gatsby-remark-copy-linked-files',
+          'gatsby-remark-smartypants'
+        ]
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-feed`,

@@ -1,29 +1,29 @@
-import React from "react"
-import Link from "gatsby-link"
-import { Container } from "react-responsive-grid"
+import React from 'react'
+import Link from 'gatsby-link'
+import { Container } from 'react-responsive-grid'
 
-import { rhythm, scale } from "../utils/typography"
+import { rhythm, scale } from '../utils/typography'
 
 class Template extends React.Component {
-  render() {
+  render () {
     const { location, children } = this.props
     let header
-    if (location.pathname === "/") {
+    if (location.pathname === '/') {
       header = (
         <h1
           style={{
             ...scale(1.5),
             marginBottom: rhythm(1.5),
-            marginTop: 0,
+            marginTop: 0
           }}
         >
           <Link
             style={{
-              boxShadow: "none",
-              textDecoration: "none",
-              color: "inherit",
+              boxShadow: 'none',
+              textDecoration: 'none',
+              color: 'inherit'
             }}
-            to={"/"}
+            to={'/'}
           >
             Gatsby Starter Blog
           </Link>
@@ -33,18 +33,18 @@ class Template extends React.Component {
       header = (
         <h3
           style={{
-            fontFamily: "Montserrat, sans-serif",
+            fontFamily: 'Montserrat, sans-serif',
             marginTop: 0,
-            marginBottom: rhythm(-1),
+            marginBottom: rhythm(-1)
           }}
         >
           <Link
             style={{
-              boxShadow: "none",
-              textDecoration: "none",
-              color: "inherit",
+              boxShadow: 'none',
+              textDecoration: 'none',
+              color: 'inherit'
             }}
-            to={"/"}
+            to={'/'}
           >
             Gatsby Starter Blog
           </Link>
@@ -55,7 +55,7 @@ class Template extends React.Component {
       <Container
         style={{
           maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`
         }}
       >
         {header}
@@ -68,7 +68,7 @@ class Template extends React.Component {
 Template.propTypes = {
   children: React.PropTypes.function,
   location: React.PropTypes.object,
-  route: React.PropTypes.object,
+  route: React.PropTypes.object
 }
 
 export default Template

@@ -1,15 +1,16 @@
-import React from "react"
-import Helmet from "react-helmet"
-import Link from "gatsby-link"
-import get from "lodash/get"
+import React from 'react'
+import Helmet from 'react-helmet'
+// import Link from 'gatsby-link'
+import get from 'lodash/get'
+import graphql from 'graphql'
 
-import Bio from "../components/Bio"
-import { rhythm, scale } from "../utils/typography"
+import Bio from '../components/Bio'
+import { rhythm, scale } from '../utils/typography'
 
 class BlogPostTemplate extends React.Component {
-  render() {
+  render () {
     const post = this.props.data.markdownRemark
-    const siteTitle = get(this.props, "data.site.siteMetadata.title")
+    const siteTitle = get(this.props, 'data.site.siteMetadata.title')
 
     return (
       <div>
@@ -18,9 +19,9 @@ class BlogPostTemplate extends React.Component {
         <p
           style={{
             ...scale(-1 / 5),
-            display: "block",
+            display: 'block',
             marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
+            marginTop: rhythm(-1)
           }}
         >
           {post.frontmatter.date}
@@ -28,7 +29,7 @@ class BlogPostTemplate extends React.Component {
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
-            marginBottom: rhythm(1),
+            marginBottom: rhythm(1)
           }}
         />
         <Bio />
