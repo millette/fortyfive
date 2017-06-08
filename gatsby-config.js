@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "Comeback 45",
     description: "A little bit of this and that",
-    site_url: "http://localhost:8001/",
+    site_url: "http://localhost:8001",
     author: "Robin Millette",
   },
   plugins: [
