@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "Comeback 45",
     description: "A little bit of this and that",
-    site_url: "http://localhost:8001",
+    site_url: "dat://9d7e4aa29575a2b44256881bb870422e73f505f91c0fc6ef4b4fd654216168e7",
     author: "Robin Millette",
   },
   plugins: [
@@ -37,15 +37,48 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-feed`,
-    `gatsby-plugin-sharp`,
-/*
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
-    },
-*/
     `gatsby-plugin-offline`,
-  ],
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                site_url
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            query: `
+              {
+                allMarkdownRemark(
+                  limit: 1000,
+                  sortBy: { order: DESC, fields: [frontmatter___date] },
+                  frontmatter: { draft: { ne: true } }
+                ) {
+                  edges {
+                    node {
+                      excerpt
+                      html
+                      fields { slug }
+                      frontmatter {
+                        title
+                        date
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/feed.xml'
+          }
+        ]
+      }
+    }
+  ]
 }
