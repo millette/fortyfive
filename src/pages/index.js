@@ -56,7 +56,7 @@ query IndexQuery {
       title
     }
   }
-  allMarkdownRemark {
+  allMarkdownRemark(frontmatter: { draft: { ne: true } }) {
     edges {
       node {
         fields {
