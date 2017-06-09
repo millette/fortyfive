@@ -48,7 +48,7 @@
     "dev": "standard && gatsby develop --port=8001",
     "lint": "standard",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "standard && gatsby build",
+    "build": "standard && gatsby build && rm public/*.map",
     "serve": "standard && gatsby serve",
     "deploy": "standard && gatsby build --prefix-links && gh-pages -d public"
   }
