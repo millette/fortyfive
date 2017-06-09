@@ -1,8 +1,13 @@
 {
-  "name": "comeback-45",
+  "name": "fortyfive",
   "description": "A little bit of this and that",
   "version": "0.0.0",
-  "author": "Robin Millette <robin@millette.info>",
+  "repository": "millette/fortyfive",
+  "author": {
+    "name": "Robin Millette",
+    "email": "robin@millette.info",
+    "url": "http://robin.millette.info"
+  },
   "dependencies": {
     "gatsby": "next",
     "gatsby-link": "next",
@@ -42,11 +47,9 @@
   "scripts": {
     "dev": "standard && gatsby develop --port=8001",
     "lint": "standard",
-    "eslint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "standard && gatsby build",
     "serve": "standard && gatsby serve",
-    "deploy": "standard && gatsby build --prefix-links && gh-pages -d public",
-    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
+    "deploy": "standard && gatsby build --prefix-links && gh-pages -d public"
   }
 }
