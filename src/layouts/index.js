@@ -4,6 +4,8 @@ import { Container } from 'react-responsive-grid'
 
 import { rhythm, scale } from '../utils/typography'
 
+import feedIcon from './feed-icon.svg'
+
 class Template extends React.Component {
   render () {
     const { location, children } = this.props
@@ -25,7 +27,7 @@ class Template extends React.Component {
             }}
             to={'/'}
           >
-            Gatsby Starter Blog
+            Comeback at 45
           </Link>
         </h1>
       )
@@ -46,7 +48,7 @@ class Template extends React.Component {
             }}
             to={'/'}
           >
-            Gatsby Starter Blog
+            Comeback at 45
           </Link>
         </h3>
       )
@@ -60,6 +62,13 @@ class Template extends React.Component {
       >
         {header}
         {children()}
+        <footer style={{textAlign: 'center'}}>
+          <p>
+            <a href='http://robin.millette.info/'>Robin Millette
+            </a> - <a href='https://github.com/millette/fortyfive'>Source code
+            </a> - <a href='/feed.xml'>Atom Feed <img src={feedIcon} width='32px' style={{verticalAlign: 'middle'}} /></a>
+          </p>
+        </footer>
       </Container>
     )
   }
