@@ -10,11 +10,17 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   return new Promise((resolve, reject) => {
     // const pages = []
     const blogPost = path.resolve('./src/templates/blog-post.js')
+//        allMarkdownRemark(frontmatter: { draft: { ne: true } }) {
+
     resolve(
       graphql(
         `
       {
-        allMarkdownRemark(frontmatter: { draft: { ne: true } }) {
+        allMarkdownRemark(
+          limit: 10,
+          sortBy: { order: DESC, fields: [frontmatter___date] },
+          frontmatter: { draft: { ne: true } }
+        ) {
           edges {
             node {
               fields {

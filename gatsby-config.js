@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Comeback 45',
+    title: 'Fortyfive',
     description: 'A little bit of this and that',
-    site_url: 'dat://9d7e4aa29575a2b44256881bb870422e73f505f91c0fc6ef4b4fd654216168e7',
+    site_url: 'dat://d62aa262608e6ccfa81364764632265668a7046f25206d3ded8480f14e8b7c42',
     author: 'Robin Millette'
   },
   plugins: [
@@ -36,7 +36,6 @@ module.exports = {
       }
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-feed`,
     `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-feed`,

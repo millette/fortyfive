@@ -11,9 +11,11 @@ import { rhythm } from '../utils/typography'
 class BlogIndex extends React.Component {
   render () {
     // console.log("props", this.props)
-    const pageLinks = []
+    // const pageLinks = []
     // const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
+
+    /*
     posts.forEach(post => {
       if (post.node.path !== '/404/') {
         // const title = get(post, 'node.frontmatter.title') || post.node.path
@@ -24,20 +26,27 @@ class BlogIndex extends React.Component {
               marginBottom: rhythm(1 / 4)
             }}
           >
-            <Link style={{ boxShadow: 'none' }} to={post.node.fields.slug}>
+            <Link style={{ boxShadow: 'none' }} to={post.node.fields.slug} key={post.node.fields.slug}>
               {post.node.frontmatter.title}
             </Link>
           </li>
         )
       }
     })
+    */
 
     return (
       <div>
         <Helmet title={get(this, 'props.data.site.siteMetadata.title')} />
         <Bio />
         <ul>
-          {pageLinks}
+          {posts && posts.map((post) => (
+            <li key={post.node.path} style={{ marginBottom: rhythm(1 / 4) }}>
+              <Link style={{ boxShadow: 'none' }} to={post.node.fields.slug}>
+                {post.node.frontmatter.title}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     )

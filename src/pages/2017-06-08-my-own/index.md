@@ -7,6 +7,9 @@ layout: post
 #path: "/2017-06-08-my-own/"
 ---
 
-This is my first post on my new fake blog! How exciting!
+Well, that's something. [Gatsby](https://github.com/gatsbyjs/gatsby)
+and [Beaker Browser](https://github.com/beakerbrowser/beaker),
+kissing in a tree :-)
 
-I'm sure I'll write a lot more interesting things in the future.
+You'll find the [source of fortyfive](https://github.com/millette/fortyfive)
+on GitHub.
