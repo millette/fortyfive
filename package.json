@@ -40,13 +40,13 @@
     "gatsby"
   ],
   "scripts": {
-    "dev": "gatsby develop --port=8001",
-    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
+    "dev": "standard && gatsby develop --port=8001",
+    "lint": "standard",
+    "eslint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "develop": "gatsby develop --port=8001",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "deploy": "gatsby build --prefix-links && gh-pages -d public",
+    "build": "standard && gatsby build",
+    "serve": "standard && gatsby serve",
+    "deploy": "standard && gatsby build --prefix-links && gh-pages -d public",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
   }
 }
