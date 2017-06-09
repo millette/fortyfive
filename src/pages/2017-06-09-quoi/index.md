@@ -25,7 +25,7 @@ pour qu'on puisse y accéder, par exemple, via <dat://super-duper.example.com>
 Hourra pour l'hébergement P2P! Ça signifie que plus il y a de visiteurs
 simultanément, plus vous aurez de bande-passante. C'est comme le
 bittorrent pour sites web, sauf qu'avec dat, on peut mettre à jour le
-contenu, tandis qu'il demeure statique dans avec un torrent.
+contenu, tandis qu'il demeure statique avec un torrent.
 
 Et quoi d'autre? Pourquoi pas React sur le *front-end*? Parfaitement!
 Des centaines de [generateurs de sites statiques](https://staticsitegenerators.net/),
