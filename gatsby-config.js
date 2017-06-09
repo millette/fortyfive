@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Fortyfive',
+    title: 'Comeback @ 45',
     description: 'A little bit of this and that',
     site_url: 'dat://d62aa262608e6ccfa81364764632265668a7046f25206d3ded8480f14e8b7c42',
     author: 'Robin Millette'

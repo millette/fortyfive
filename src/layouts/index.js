@@ -27,7 +27,7 @@ class Template extends React.Component {
             }}
             to={'/'}
           >
-            Comeback at 45
+            Comeback @ 45
           </Link>
         </h1>
       )
@@ -48,7 +48,7 @@ class Template extends React.Component {
             }}
             to={'/'}
           >
-            Comeback at 45
+            Comeback @ 45
           </Link>
         </h3>
       )
