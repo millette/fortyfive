@@ -25,9 +25,9 @@ So great, P2P hosting! That means the more visitor you have simultaneously,
 the more bandwith you have. Think of it like bittorrent for websites,
 except with dat, you can update the content whereas a torrent holds static content.
 
-What well you ask? What about React on the front-end? Sure!
+What else you ask? What about React on the front-end? Sure!
 From the hundreds of [static site generators out there](https://staticsitegenerators.net/),
-a few are build with React in mind. For the visitors, that means a pleasant
+a few are built with React in mind. For the visitors, that means a pleasant
 viewing experience, less latency and all that good stuff.
 
 In this case, I decided to give [Gatsby](https://github.com/gatsbyjs/gatsby)
